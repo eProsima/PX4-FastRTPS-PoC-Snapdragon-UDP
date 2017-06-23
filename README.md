@@ -2,7 +2,7 @@
 
 ## The spirit
 
-This a proof of concept aims to check the solution of a need to the Qualcomm platform Snapdragon Flight. This need is add a UDP transport for the bridge between PX4 and Fast RTPS.
+This is a proof of concept aims to check the solution of a need to the Qualcomm platform Snapdragon Flight. This need is to add a UDP transport for the bridge between PX4 and Fast RTPS.
 
 For this reason we create here an example of the usage of the new UDP node created for this task over a single message *sensor_combined* including both Micro RTPS agent and Micro RTPS client.
 
@@ -20,7 +20,7 @@ After that reaches, we will start with this repository:
   ```sh
   $ cp -r /path/to/this/repo/micrortps_client_udp /path/to/eprosima-firmware/src/examples/
   ```
-  - Enable the compiling of the example uncommenting on the file cmake/configs/**posix_eagle_default.cmake** of *eProsima/Firmware* this line:
+  - Enable the compilation of the example uncommenting on the file cmake/configs/**posix_eagle_default.cmake** of *eProsima/Firmware* this line:
 
   ```sh
        # micro-RTPS
@@ -54,7 +54,7 @@ After that reaches, we will start with this repository:
 
   ```sh
   $ adb shell
-  linaro$ cd /home/linaro
+  linaro$ cd /home/linaro && ./px4 mainapp.config
   pxh> micrortps_client_udp
   ```
 
