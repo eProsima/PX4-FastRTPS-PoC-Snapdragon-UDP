@@ -1,0 +1,3 @@
+[submodule "micrortps_agent_udp/cmake_hexagon"]
+	path = micrortps_agent_udp/cmake_hexagon
+	url = https://github.com/ATLFlight/cmake_hexagon.git
