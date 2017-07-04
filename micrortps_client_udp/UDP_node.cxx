@@ -144,7 +144,7 @@ int16_t UDP_node::read(char* topic_ID, char out_buffer[])
                            (struct sockaddr*) &receiver_outaddr, &addrlen);
     if (len <= 0)
     {
-        printf("Failed receiving UDP message: %d\n", len);
+        printf("Failed receiving UDP message: %ld\n", (long)len);
         return -1;
     }
 
@@ -232,7 +232,6 @@ int16_t UDP_node::read(char* topic_ID, char out_buffer[])
     return ret;
 }
 
-
 int16_t UDP_node::write(const char topic_ID, char buffer[], uint32_t length)
 {
     if (sender_fd == -1) return 2;
@@ -291,7 +290,6 @@ err:
     return len;
 }
 
-
 uint16_t UDP_node::crc16_byte(uint16_t crc, const uint8_t data)
 {
 	return (crc >> 8) ^ crc16_table[(crc ^ data) & 0xff];
@@ -299,7 +297,7 @@ uint16_t UDP_node::crc16_byte(uint16_t crc, const uint8_t data)
 
 uint16_t UDP_node::crc16(uint8_t const *buffer, size_t len)
 {
-	uint16_t crc = 0;
-	while (len--) crc = crc16_byte(crc, *buffer++);
-	return crc;
+    uint16_t crc = 0;
+    while (len--) crc = crc16_byte(crc, *buffer++);
+    return crc;
 }
