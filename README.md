@@ -20,11 +20,11 @@ After that reaches, we will start with this repository:
   ```sh
   $ cp -r /path/to/this/repo/micrortps_client_udp /path/to/eprosima-firmware/src/examples/
   ```
-  - Enable the compilation of the example uncommenting on the file cmake/configs/**posix_sdflight_default.cmake** of *eProsima/Firmware* this line:
+  - Enable the compilation of the example changing on the file cmake/configs/**posix_sdflight_default.cmake** of *eProsima/Firmware* this line:
 
   ```sh
        # micro-RTPS
-       #examples/micrortps_client_udp
+       #examples/micrortps_client
   ```
   ```sh
        # micro-RTPS
