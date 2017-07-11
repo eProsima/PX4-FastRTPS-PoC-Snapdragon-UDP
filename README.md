@@ -42,6 +42,8 @@ After that reaches, we will start with this repository:
   $ cd /path/to/this/repo/micrortps_agent_udp
   $ make CROSS_FASTRTPS_DIR=/path/to/cross_fastrtps/install load
   ```
+**NOTE**: To compile from scratch without the existing Makefile see the cmake command inside and the options used. To upload the application see the *load* section in the same file.
+
   - Launch the agent:
 
   ```sh
